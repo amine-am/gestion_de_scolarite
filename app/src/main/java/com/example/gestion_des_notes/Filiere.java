@@ -43,6 +43,7 @@ public class Filiere extends AppCompatActivity {
                     String idDisplay = c.getString(id);
                     String intutleDisplay = c.getString(intutle);
              //       System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
+                    //tarik
                     filieres.add(intutleDisplay);
                 } while(c.moveToNext());
             }
