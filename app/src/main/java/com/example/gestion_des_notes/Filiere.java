@@ -42,7 +42,7 @@ public class Filiere extends AppCompatActivity {
                 do{
                     String idDisplay = c.getString(id);
                     String intutleDisplay = c.getString(intutle);
-                    System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
+//                    System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
                     filieres.add(intutleDisplay);
                 } while(c.moveToNext());
             }
