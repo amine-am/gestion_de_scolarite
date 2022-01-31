@@ -10,13 +10,15 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.gestion_des_notes.listview.FiliereAdapter;
+
 import java.util.ArrayList;
 
 public class Filiere extends AppCompatActivity {
 
-    ListView listview;
-    ArrayList<String> filieres;
-    ArrayAdapter<String> adapter;
+    static ListView listview;
+    static ArrayList<String> filieres;
+    static FiliereAdapter adapter;
     EditText input;
     ImageView add;
 
@@ -33,7 +35,7 @@ public class Filiere extends AppCompatActivity {
         filieres.add("MBD");
 
 
-        adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, filieres);
+        adapter = new FiliereAdapter(getApplicationContext(), filieres);
         listview.setAdapter(adapter);
 
         add.setOnClickListener(new View.OnClickListener(){
@@ -51,8 +53,13 @@ public class Filiere extends AppCompatActivity {
         });
     }
 
-    public void addFiliere(String text){
+    public static void addFiliere(String text){
         filieres.add(text);
+        listview.setAdapter(adapter);
+    }
+
+    public static void deleteFiliere(int delete){
+        filieres.remove(delete);
         listview.setAdapter(adapter);
     }
 

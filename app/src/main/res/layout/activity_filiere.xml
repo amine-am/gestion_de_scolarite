@@ -44,7 +44,7 @@
                 android:layout_gravity="top"
                 android:fontFamily="@font/heebo_bold"
                 android:text="Ajouter une filière"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:ems="10"
-                    android:hint="Nom de la filière"
+                    android:hint="Filière"
                     android:inputType="text" />
 
                 <ImageView
@@ -71,7 +71,7 @@
                     android:layout_marginLeft="7sp"
 
                     android:layout_toRightOf="@+id/inputfiliere"
-                    android:background="@drawable/corner_box"
+                    android:background="@drawable/list_item"
                     android:src="@drawable/add_check" />
             </RelativeLayout>
         </LinearLayout>
@@ -89,16 +89,18 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/heebo_bold"
                 android:text="Liste des filières"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:textSize="20sp" />
 
             <ListView
+                android:padding="10dp"
                 android:id="@+id/listfiliere"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/list_row"/>
 
         </LinearLayout>
     </LinearLayout>
