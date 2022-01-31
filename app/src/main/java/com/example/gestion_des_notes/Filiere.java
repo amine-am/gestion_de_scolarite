@@ -2,6 +2,10 @@ package com.example.gestion_des_notes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -27,12 +31,30 @@ public class Filiere extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filiere);
 
+        filieres = new ArrayList<>();
+
+        try {
+            SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
+            db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
+            final Cursor c = db.rawQuery("select * from filiers",null);
+            int id = c.getColumnIndex("id");
+            int intutle = c.getColumnIndex("INTITULE");
+            if(c.moveToFirst())
+            {
+                do{
+                    String idDisplay = c.getString(id);
+                    String intutleDisplay = c.getString(intutle);
+             //       System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
+
+                    filieres.add(intutleDisplay);
+                } while(c.moveToNext());
+            }
+        }catch (Exception ex){showToast("Failed to Fetch From Filier Table");}
+
         listview = findViewById(R.id.listfiliere);
         input = findViewById(R.id.inputfiliere);
         add = findViewById(R.id.addfiliere);
 
-        filieres = new ArrayList<>();
-        filieres.add("MBD");
 
 
         adapter = new FiliereAdapter(getApplicationContext(), filieres);
@@ -47,7 +69,6 @@ public class Filiere extends AppCompatActivity {
                 }else{
                     addFiliere(text);
                     input.setText("");
-                    showToast("Filière " + text + " ajoutée.");
                 }
             }
         });
@@ -56,6 +77,19 @@ public class Filiere extends AppCompatActivity {
     public static void addFiliere(String text){
         filieres.add(text);
         listview.setAdapter(adapter);
+        insertFilierDB(text);
+    }
+
+    public void insertFilierDB(String filName){
+        try {
+            SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
+            String sql = "insert into filiers(INTITULE)values(?)";
+            SQLiteStatement statement = db.compileStatement(sql);
+            statement.bindString(1,filName);
+            statement.execute();
+            System.out.println("Filier added");
+        }catch (Exception ex){showToast("Failed To Insert Record");}
+
     }
 
     public static void deleteFiliere(int delete){
