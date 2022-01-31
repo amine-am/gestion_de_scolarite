@@ -32,7 +32,7 @@ public class Filiere extends AppCompatActivity {
         setContentView(R.layout.activity_filiere);
 
         filieres = new ArrayList<>();
-
+        System.out.println("YASSINE 01");
         try {
             SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
@@ -55,7 +55,7 @@ public class Filiere extends AppCompatActivity {
         input = findViewById(R.id.inputfiliere);
         add = findViewById(R.id.addfiliere);
 
-
+        System.out.println("Yassine #2");
 
         adapter = new FiliereAdapter(getApplicationContext(), filieres);
         listview.setAdapter(adapter);
@@ -74,10 +74,11 @@ public class Filiere extends AppCompatActivity {
         });
     }
 
-    public static void addFiliere(String text){
+    public void addFiliere(String text){
         filieres.add(text);
         listview.setAdapter(adapter);
         insertFilierDB(text);
+        System.out.println("yassine 3");
     }
 
     public void insertFilierDB(String filName){
