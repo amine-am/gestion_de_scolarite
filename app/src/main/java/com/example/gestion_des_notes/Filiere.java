@@ -43,11 +43,7 @@ public class Filiere extends AppCompatActivity {
                     String idDisplay = c.getString(id);
                     String intutleDisplay = c.getString(intutle);
              //       System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
-<<<<<<< HEAD
-                    //tarik
-=======
-//                    Yassine
->>>>>>> d0244555a76778f034ec5a6867ed3433f4ebdfc9
+
                     filieres.add(intutleDisplay);
                 } while(c.moveToNext());
             }
