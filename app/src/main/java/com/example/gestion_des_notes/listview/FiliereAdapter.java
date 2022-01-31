@@ -36,7 +36,10 @@ public class FiliereAdapter extends ArrayAdapter<String> {
             convertView = layoutInflater.inflate(R.layout.list_row, null);
             System.out.println("HELLO I DID CONVERTVIEW");
             TextView id = convertView.findViewById(R.id.id);
-//            id.setText(position + 1 );
+            String tmp;
+            Integer int_tmp = position + 1;
+            tmp = int_tmp.toString();
+            id.setText(tmp);
             TextView name = convertView.findViewById(R.id.name);
             name.setText(list.get(position));
         }

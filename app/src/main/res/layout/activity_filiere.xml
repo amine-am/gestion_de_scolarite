@@ -96,11 +96,11 @@
                 android:textSize="20sp" />
 
             <ListView
-                android:padding="10dp"
                 android:id="@+id/listfiliere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/list_row"/>
+                android:padding="10dp"
+                tools:listitem="@layout/list_row" />
 
         </LinearLayout>
     </LinearLayout>
