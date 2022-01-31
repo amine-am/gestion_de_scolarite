@@ -22,6 +22,7 @@ public class Filiere extends AppCompatActivity {
 
     static ListView listview;
     static ArrayList<String> filieres;
+    static ArrayList<String> ids;
     static FiliereAdapter adapter;
     EditText input;
     ImageView add;
@@ -32,8 +33,9 @@ public class Filiere extends AppCompatActivity {
         setContentView(R.layout.activity_filiere);
 
         filieres = new ArrayList<>();
-        System.out.println("YASSINE 01");
+        ids = new ArrayList<>();
         try {
+
             SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
             final Cursor c = db.rawQuery("select * from filiers",null);
@@ -47,6 +49,8 @@ public class Filiere extends AppCompatActivity {
              //       System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
 
                     filieres.add(intutleDisplay);
+                    ids.add(idDisplay);
+
                 } while(c.moveToNext());
             }
         }catch (Exception ex){showToast("Failed to Fetch From Filier Table");}
@@ -55,9 +59,7 @@ public class Filiere extends AppCompatActivity {
         input = findViewById(R.id.inputfiliere);
         add = findViewById(R.id.addfiliere);
 
-        System.out.println("Yassine #2");
-
-        adapter = new FiliereAdapter(getApplicationContext(), filieres);
+        adapter = new FiliereAdapter(getApplicationContext(), filieres , ids);
         listview.setAdapter(adapter);
 
         add.setOnClickListener(new View.OnClickListener(){
@@ -72,13 +74,14 @@ public class Filiere extends AppCompatActivity {
                 }
             }
         });
+
     }
+
 
     public void addFiliere(String text){
         filieres.add(text);
         listview.setAdapter(adapter);
         insertFilierDB(text);
-        System.out.println("yassine 3");
     }
 
     public void insertFilierDB(String filName){
