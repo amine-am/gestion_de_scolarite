@@ -32,9 +32,7 @@ public class FiliereAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            System.out.println("HELLO I'M IN HERE");
             convertView = layoutInflater.inflate(R.layout.list_row, null);
-            System.out.println("HELLO I DID CONVERTVIEW");
             TextView id = convertView.findViewById(R.id.id);
             String tmp;
             Integer int_tmp = position + 1;

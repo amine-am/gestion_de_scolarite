@@ -49,7 +49,7 @@ public class Filiere extends AppCompatActivity {
                     filieres.add(intutleDisplay);
                 } while(c.moveToNext());
             }
-        }catch (Exception ex){showToast("Failed to Fetch From Filier Table");}
+        }catch (Exception ex){showToast("Failed to Fetch From Filiere Table");}
 
         listview = findViewById(R.id.listfiliere);
         input = findViewById(R.id.inputfiliere);

@@ -24,9 +24,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:text="Gestion des Notes"
+                android:text="Gestion de Scolarité"
                 android:textColor="#000000"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/heebo_extrabold"
                 android:textFontWeight="500"
                 android:textSize="35sp"
                 />
@@ -48,7 +48,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#FFFFC8"
+                android:backgroundTint="#F4E060"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -70,9 +70,9 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Consulter les \nFilières"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Consulter les \nfilières"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -85,7 +85,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#C8FFC9"
+                android:backgroundTint="#81CD61"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -108,9 +108,9 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Afficher les \nModules"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Afficher les \nmodules"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -123,7 +123,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#C8F9FF"
+                android:backgroundTint="#60A8F4"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -145,9 +145,9 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Consulter les \nEtudiants"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Consulter les \nétudiants"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -160,7 +160,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#FFE0C8"
+                android:backgroundTint="#FFA85B"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -184,9 +184,9 @@
                         android:layout_marginTop="12dp"
 
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Gérer les \nPlannings"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Gérer les \nplannings"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -199,7 +199,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#FFC8C8"
+                android:backgroundTint="#F47070"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -221,9 +221,9 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Ajouter les \nNotes"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Ajouter les \nnotes"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -236,7 +236,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:backgroundTint="#CEC8FF"
+                android:backgroundTint="#b578b8"
                 android:layout_margin="12dp">
 
                 <RelativeLayout
@@ -260,9 +260,9 @@
                         android:layout_marginTop="12dp"
 
                         android:fontFamily="@font/heebo_extrabold"
-                        android:text="Consulter les \nBulletins"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
+                        android:text="Consulter les \nbulletins"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>

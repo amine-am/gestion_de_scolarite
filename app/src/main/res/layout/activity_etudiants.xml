@@ -1,9 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".Etudiants">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/half_circle_b"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo_extrabold"
+                android:text="Consulter les \nEtudiants"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/eleve" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/etudiants"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="12dp"
+                android:backgroundTint="#60A8F4"
+                android:layout_margin="12dp">
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="60dp"
+                    android:text="Ajouter un étudiant"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/heebo_bold"
+                    android:textColor="#fff" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/heebo_bold"
+                android:text="Liste des etudiants :"
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#60A8F4">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="CNE"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/heebo_bold"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#60A8F4">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_weight="4"
+                        android:text="Nom"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/heebo_bold"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center_vertical"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    app:cardCornerRadius="5dp"
+                    android:backgroundTint="#60A8F4">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Prénom"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/heebo_bold"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center_vertical"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="36sp"
+                    android:padding="5dp"
+                    android:layout_weight="5"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+
+            <ListView
+                android:id="@+id/listfiliere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                tools:listitem="@layout/etudiant_row" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

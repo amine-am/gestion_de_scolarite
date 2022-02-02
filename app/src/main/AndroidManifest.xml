@@ -8,8 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:windowSoftInputMode="stateHidden"
-        android:theme="@style/Theme.Gestion_des_notes">
+        android:theme="@style/Theme.Gestion_des_notes"
+        android:windowSoftInputMode="stateHidden">
+        <activity
+            android:name=".AddPlanning"
+            android:exported="false" />
+        <activity
+            android:name=".AddEtudiant"
+            android:exported="false" />
         <activity
             android:name=".Bulletins"
             android:exported="false" />
@@ -21,6 +27,9 @@
             android:exported="false" />
         <activity
             android:name=".Modules"
+            android:exported="false" />
+        <activity
+            android:name=".Etudiants"
             android:exported="false" />
         <activity
             android:name=".Filiere"

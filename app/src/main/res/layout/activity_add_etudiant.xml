@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".Notes">
+    tools:context=".AddEtudiant">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/half_circle_r"
+            android:background="@drawable/half_circle_b"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -25,14 +26,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/heebo_extrabold"
-                android:text="Ajouter des \nnotes"
+                android:text="Ajouter un \nEtudiant"
                 android:textColor="#fff"
                 android:textSize="30sp" />
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/notes" />
+                android:src="@drawable/eleve" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +46,7 @@
                 android:layout_gravity="top"
                 android:fontFamily="@font/heebo_bold"
                 android:text="Informations sur l'étudiant :"
-                android:textColor="#F47070"
+                android:textColor="#60A8F4"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="20dp"
@@ -70,7 +71,7 @@
                     android:gravity="center_vertical|left" />
 
                 <EditText
-                    android:id="@+id/inputcne"
+                    android:id="@+id/inputmodule"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -91,7 +92,7 @@
 
                 <TextView
                     android:fontFamily="@font/heebo_bold"
-                    android:text="Nom &amp; Prénom :"
+                    android:text="Nom :"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
@@ -99,16 +100,64 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical|left" />
 
-                <TextView
-                    android:id="@+id/outputprenom"
+                <EditText
+                    android:id="@+id/inputnom"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="Nom, Prénom"
+                    android:hint="Nom"
+                    android:background="@drawable/list_item"
                     android:inputType="text" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:fontFamily="@font/heebo_bold"
+                    android:text="Prénom :"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left" />
+
+                <EditText
+                    android:id="@+id/inputprenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Prénom"
+                    android:background="@drawable/list_item"
+                    android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="@font/heebo_bold"
+                android:text="Choix de la formation :"
+                android:textColor="#60A8F4"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="25sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -127,54 +176,8 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical|left" />
 
-                <TextView
-                    android:id="@+id/outputfiliere"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Filière"
-                    android:inputType="text" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:fontFamily="@font/heebo_bold"
-                android:text="Ajouter la note :"
-                android:textColor="#F47070"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="20dp"
-                android:textSize="25sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:fontFamily="@font/heebo_bold"
-                    android:text="Module :"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical|left" />
-
                 <Spinner
-                    android:id="@+id/inputmodule"
+                    android:id="@+id/input"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -192,7 +195,7 @@
 
                 <TextView
                     android:fontFamily="@font/heebo_bold"
-                    android:text="Note :"
+                    android:text="Niveau :"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
@@ -200,20 +203,39 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical|left" />
 
-                <EditText
-                    android:id="@+id/inputnote"
+                <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="Note (de 0 à 20)"
-                    android:background="@drawable/list_item"
-                    android:inputType="text" />
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <RadioButton
+                        android:id="@+id/niveau_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="M1"
+                        android:textColor="#000"
+                        android:fontFamily="@font/heebo_regular"
+                        android:textSize="18sp"
+                        android:onClick="checkbutton"/>
+                    <RadioButton
+                        android:id="@+id/niveau_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="M2"
+                        android:textColor="#000"
+                        android:fontFamily="@font/heebo_regular"
+                        android:textSize="18sp"
+                        android:onClick="checkbutton"/>
+                </RadioGroup>
             </LinearLayout>
         </LinearLayout>
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/notes"
+            android:id="@+id/filiere"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_columnWeight="1"
@@ -221,7 +243,7 @@
             app:cardElevation="10dp"
             android:layout_gravity="center"
             app:cardCornerRadius="12dp"
-            android:backgroundTint="#F47070"
+            android:backgroundTint="#60A8F4"
             android:layout_margin="30dp">
             <TextView
                 android:layout_width="220dp"
@@ -233,4 +255,6 @@
                 android:textColor="#fff" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+
 </RelativeLayout>

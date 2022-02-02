@@ -8,39 +8,32 @@
 
 
     <TextView
-        android:id="@+id/id"
+        android:id="@+id/module"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_weight="6"
-        android:text="ID"
+        android:layout_weight="2"
+        android:text="Module"
         android:textSize="18sp"
         android:fontFamily="@font/heebo_regular"
-        android:textColor="#A6A6A6"
+        android:textColor="#000"
         android:background="@drawable/list_item"
-        android:gravity="center"/>
+        android:gravity="center_vertical"
+        />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_weight="3"
-        android:text="Text"
+        android:layout_weight="5"
+        android:text="0.0"
         android:textSize="18sp"
-        android:fontFamily="@font/heebo_regular"
-        android:textColor="#000000"
-        android:background="@drawable/list_item"
-        android:gravity="center_vertical"/>
+        android:fontFamily="@font/heebo_bold"
+        android:textColor="#fff"
+        android:background="@drawable/corner_box"
 
-    <ImageView
-        android:id="@+id/delete"
-        android:layout_width="match_parent"
-        android:layout_height="36sp"
-        android:padding="5dp"
-        android:layout_weight="6"
-        android:src="@drawable/delete"
-        android:background="@drawable/delete_item"
         android:gravity="center"/>
+
 
 </LinearLayout>

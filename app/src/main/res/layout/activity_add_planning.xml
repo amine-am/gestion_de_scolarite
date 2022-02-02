@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".Filiere">
+    tools:context=".AddPlanning">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,19 +16,20 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:gravity="center"
-            android:background="@drawable/half_circle_y"
+            android:background="@drawable/half_circle_o"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/heebo_extrabold"
-                android:text="Consulter les \nFilières"
+                android:paddingRight="30dp"
+                android:text="Ajouter un \nplanning"
                 android:textColor="#fff"
                 android:textSize="30sp" />
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/filiere" />
+                android:src="@drawable/planning" />
         </LinearLayout>
 
         <LinearLayout
@@ -37,13 +38,12 @@
             android:orientation="vertical"
             >
 
-
             <TextView
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:fontFamily="@font/heebo_bold"
-                android:text="Ajouter une filière :"
+                android:text="Choisir les modules :"
                 android:textColor="#000"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
@@ -54,14 +54,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp">
 
-                <EditText
-                    android:id="@+id/inputfiliere"
+
+                <Spinner
+                    android:id="@+id/inputmodule"
                     android:layout_width="220dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_centerInParent="true"
                     android:ems="10"
-                    android:hint="Filière"
-                    android:inputType="text" />
+                    android:background="@color/white"
+                    android:gravity="center" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="40sp"
@@ -69,15 +70,16 @@
                     app:cardCornerRadius="5dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="7sp"
-                    android:layout_toRightOf="@+id/inputfiliere"
-                    android:backgroundTint="#F4E060">
-                <ImageView
-                    android:id="@+id/addfiliere"
-                    android:layout_width="40sp"
-                    android:layout_height="40sp"
-
-                    android:src="@drawable/add_check" />
+                    android:layout_toRightOf="@+id/inputmodule"
+                    android:backgroundTint="#FFA85B">
+                    <ImageView
+                        android:id="@+id/addmodule"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:src="@drawable/add_check" />
                 </com.google.android.material.card.MaterialCardView>
+
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -85,20 +87,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             >
 
             <TextView
-                android:layout_width="180dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/heebo_bold"
-                android:text="Liste des filières :"
+                android:text="Le planning :"
                 android:textColor="#000"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:textSize="20sp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
-                    android:backgroundTint="#F4E060"
+                    android:backgroundTint="#FFA85B"
                     >
                     <TextView
                         android:layout_width="match_parent"
@@ -127,12 +131,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:backgroundTint="#F4E060"
+                    android:backgroundTint="#FFA85B"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nom de la filière"
+                        android:text="Nom du module"
                         android:padding="5dp"
                         android:textSize="18sp"
                         android:gravity="center"
@@ -148,6 +152,7 @@
                     android:gravity="center"/>
             </LinearLayout>
 
+
             <ListView
                 android:id="@+id/listfiliere"
                 android:layout_width="match_parent"
@@ -158,4 +163,5 @@
 
         </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>
