@@ -37,10 +37,10 @@
         android:id="@+id/delete"
         android:layout_width="match_parent"
         android:layout_height="36sp"
-        android:padding="5dp"
         android:layout_weight="6"
-        android:src="@drawable/delete"
         android:background="@drawable/delete_item"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:padding="5dp"
+        android:src="@drawable/delete" />
 
 </LinearLayout>

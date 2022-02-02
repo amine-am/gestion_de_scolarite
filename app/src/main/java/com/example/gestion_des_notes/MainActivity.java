@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         c5.setOnClickListener(this);
         c6.setOnClickListener(this);
 
-
     }
 
     @Override
@@ -49,4 +48,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bulletins:i = new Intent(this, Bulletins.class); startActivity(i);break;
         }
     }
+
 }
