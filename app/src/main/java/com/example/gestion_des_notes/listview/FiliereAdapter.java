@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -35,6 +35,10 @@ public class FiliereAdapter extends ArrayAdapter<String> {
     ArrayList<String> listids;
     Context context;
 
+    public void goNothing(){
+        System.out.println("RedeaME ");
+    }
+
     public FiliereAdapter(@NonNull Context context, ArrayList<String> filieres , ArrayList<String> ids) {
         super(context, R.layout.list_row, filieres);
         this.context = context;
@@ -51,9 +55,12 @@ public class FiliereAdapter extends ArrayAdapter<String> {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_row, null);
             TextView id = convertView.findViewById(R.id.id);
+            System.out.println("position = " + position);
             id.setText(listids.get(position));
+            System.out.println("id " + listids.get(position));
             TextView name = convertView.findViewById(R.id.name);
             name.setText(list.get(position));
+            System.out.println("name =" + list.get(position));
 
             ImageView del = convertView.findViewById(R.id.delete);
             del.setOnClickListener(new View.OnClickListener(){
@@ -65,6 +72,7 @@ public class FiliereAdapter extends ArrayAdapter<String> {
                         SQLiteStatement statement = db.compileStatement(sql);
                         statement.bindString(1,listids.get(position));
                         statement.execute();
+                        showToast("Done");
                     }catch (Exception e){
                         System.out.println(e);
                     }
@@ -74,6 +82,10 @@ public class FiliereAdapter extends ArrayAdapter<String> {
         return convertView;
     }
 
+
+    private void showToast(String text){
+        Toast.makeText(this.context, text, Toast.LENGTH_SHORT).show();
+    }
 
 }
 

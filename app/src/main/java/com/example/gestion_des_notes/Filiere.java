@@ -46,8 +46,6 @@ public class Filiere extends AppCompatActivity {
                 do{
                     String idDisplay = c.getString(id);
                     String intutleDisplay = c.getString(intutle);
-             //       System.out.println("id = " + idDisplay + " intutule = " + intutleDisplay);
-
                     filieres.add(intutleDisplay);
                     ids.add(idDisplay);
 
@@ -59,7 +57,7 @@ public class Filiere extends AppCompatActivity {
         input = findViewById(R.id.inputfiliere);
         add = findViewById(R.id.addfiliere);
 
-        adapter = new FiliereAdapter(getApplicationContext(), filieres , ids);
+        adapter = new FiliereAdapter(getApplicationContext(), filieres, ids);
         listview.setAdapter(adapter);
 
         add.setOnClickListener(new View.OnClickListener(){
