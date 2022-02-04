@@ -9,31 +9,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_des_notes"
-        android:windowSoftInputMode="stateHidden">
+        android:windowSoftInputMode="stateAlwaysHidden">
         <activity
             android:name=".AddPlanning"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".AddEtudiant"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Bulletins"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Notes"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Planning"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Modules"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Etudiants"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".Filiere"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

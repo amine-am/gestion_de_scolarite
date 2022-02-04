@@ -35,10 +35,6 @@ public class FiliereAdapter extends ArrayAdapter<String> {
     ArrayList<String> listids;
     Context context;
 
-    public void goNothing(){
-        System.out.println("RedeaME ");
-    }
-
     public FiliereAdapter(@NonNull Context context, ArrayList<String> filieres , ArrayList<String> ids) {
         super(context, R.layout.list_row, filieres);
         this.context = context;
@@ -54,15 +50,21 @@ public class FiliereAdapter extends ArrayAdapter<String> {
 
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_row, null);
-            TextView id = convertView.findViewById(R.id.id);
-            System.out.println("position = " + position);
-            id.setText(listids.get(position));
-            System.out.println("id " + listids.get(position));
-            TextView name = convertView.findViewById(R.id.name);
-            name.setText(list.get(position));
-            System.out.println("name =" + list.get(position));
 
+            TextView id = convertView.findViewById(R.id.id);
+            try{
+                id.setText(listids.get(position));
+            }catch (Exception e){
+                id.setText(listids.get(position -1 ));
+            }
+            TextView name = convertView.findViewById(R.id.name);
+            try{
+                name.setText(list.get(position));
+            }catch (Exception e){
+                name.setText(list.get(position -1 ));
+            }
             ImageView del = convertView.findViewById(R.id.delete);
+
             del.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
@@ -72,6 +74,7 @@ public class FiliereAdapter extends ArrayAdapter<String> {
                         SQLiteStatement statement = db.compileStatement(sql);
                         statement.bindString(1,listids.get(position));
                         statement.execute();
+                        Filiere.deleteFiliere(position);
                         showToast("Done");
                     }catch (Exception e){
                         System.out.println(e);
@@ -82,11 +85,9 @@ public class FiliereAdapter extends ArrayAdapter<String> {
         return convertView;
     }
 
-
     private void showToast(String text){
         Toast.makeText(this.context, text, Toast.LENGTH_SHORT).show();
     }
-
 }
 
 

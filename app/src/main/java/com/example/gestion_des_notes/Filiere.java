@@ -75,7 +75,6 @@ public class Filiere extends AppCompatActivity {
 
     }
 
-
     public void addFiliere(String text){
         filieres.add(text);
         listview.setAdapter(adapter);
@@ -91,7 +90,6 @@ public class Filiere extends AppCompatActivity {
             statement.execute();
             System.out.println("Filier added");
         }catch (Exception ex){showToast("Failed To Insert Record");}
-
     }
 
     public static void deleteFiliere(int delete){
