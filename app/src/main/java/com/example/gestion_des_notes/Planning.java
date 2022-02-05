@@ -14,12 +14,16 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Planning extends AppCompatActivity implements View.OnClickListener {
 
     public CardView c;
     Spinner spinnerfil;
     String arrfil[];
+    List<String> list = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,15 +35,13 @@ public class Planning extends AppCompatActivity implements View.OnClickListener 
         SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
         Cursor c = db.rawQuery("SELECT * FROM filiers", null);
         arrfil = new String[c.getCount()];
-        c.moveToFirst();
-        for (int i=0;i< arrfil.length;i++){
-            arrfil[i] = c.getString(1);
-            System.out.println("THE DATAS");
-            System.out.println(i);
-            System.out.println(arrfil[i]);
-            c.moveToFirst();
+        if (c.moveToFirst()) {
+            do {
+                list.add(c.getString(1));
+                System.out.println(list);//adding 2nd column data
+            } while (c.moveToNext());
         }
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrfil);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         spinnerfil.setAdapter(adapter);
     }
 
