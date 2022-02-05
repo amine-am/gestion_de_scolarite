@@ -204,6 +204,7 @@
                     android:gravity="center_vertical|left" />
 
                 <RadioGroup
+                    android:id="@+id/radiogrp"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -220,6 +221,7 @@
                         android:fontFamily="@font/heebo_regular"
                         android:textSize="18sp"
                         android:onClick="checkbutton"/>
+
                     <RadioButton
                         android:id="@+id/niveau_two"
                         android:layout_width="match_parent"
@@ -231,6 +233,7 @@
                         android:fontFamily="@font/heebo_regular"
                         android:textSize="18sp"
                         android:onClick="checkbutton"/>
+
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>
