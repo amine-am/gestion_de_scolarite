@@ -238,7 +238,7 @@
             </LinearLayout>
         </LinearLayout>
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/filiere"
+            android:id="@+id/addstudent"
             android:layout_width="220dp"
             android:layout_height="50dp"
             android:layout_columnWeight="1"

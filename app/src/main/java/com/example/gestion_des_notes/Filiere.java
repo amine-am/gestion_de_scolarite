@@ -35,7 +35,6 @@ public class Filiere extends AppCompatActivity {
         filieres = new ArrayList<>();
         ids = new ArrayList<>();
         try {
-
             SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
             final Cursor c = db.rawQuery("select * from filiers",null);
