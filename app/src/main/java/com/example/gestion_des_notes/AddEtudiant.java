@@ -82,6 +82,7 @@ public class AddEtudiant extends AppCompatActivity {
                                 nivauChoice ,
                                 spinnerfil.getSelectedItem().toString()
                         );
+                        finish();
                     }catch (Exception ex){
                         System.out.println(ex);
                         showToast("ERR IN INSCRIPTION DB");

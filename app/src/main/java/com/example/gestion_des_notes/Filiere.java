@@ -87,12 +87,12 @@ public class Filiere extends AppCompatActivity {
             SQLiteStatement statement = db.compileStatement(sql);
             statement.bindString(1,filName);
             statement.execute();
-            System.out.println("Filier added");
         }catch (Exception ex){showToast("Failed To Insert Record");}
     }
 
     public static void deleteFiliere(int delete){
         filieres.remove(delete);
+        ids.remove(delete);
         listview.setAdapter(adapter);
     }
 
