@@ -35,7 +35,6 @@ public class Filiere extends AppCompatActivity {
         filieres = new ArrayList<>();
         ids = new ArrayList<>();
         try {
-
             SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
             final Cursor c = db.rawQuery("select * from filiers",null);
@@ -88,12 +87,12 @@ public class Filiere extends AppCompatActivity {
             SQLiteStatement statement = db.compileStatement(sql);
             statement.bindString(1,filName);
             statement.execute();
-            System.out.println("Filier added");
         }catch (Exception ex){showToast("Failed To Insert Record");}
     }
 
     public static void deleteFiliere(int delete){
         filieres.remove(delete);
+        ids.remove(delete);
         listview.setAdapter(adapter);
     }
 

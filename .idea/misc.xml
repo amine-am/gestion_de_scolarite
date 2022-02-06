@@ -36,6 +36,19 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/etudiant_row.xml" value="0.33" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/list_row.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/planning_row.xml" value="0.1675213675213675" />
+<<<<<<< HEAD
+=======
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_add_etudiant.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_etudiants.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_filiere.xml" value="0.1796875" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_notes.xml" value="0.1796875" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_planning.xml" value="0.1796875" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/bulletin_row.xml" value="0.1796875" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/etudiant_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/list_row.xml" value="0.22" />
+        <entry key="..\:/Users/el_ghizi_yassine/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.25416666666666665" />
+>>>>>>> a3ac1d6784724c18b6c1081eae0c159d74d6716f
       </map>
     </option>
   </component>
