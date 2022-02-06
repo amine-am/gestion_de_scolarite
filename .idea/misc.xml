@@ -23,7 +23,7 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/drawable/list_item.xml" value="0.18076923076923077" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/drawable/module_box.xml" value="0.2203125" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_add_etudiant.xml" value="0.1675213675213675" />
-        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_add_planning.xml" value="0.1675213675213675" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_add_planning.xml" value="0.21" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_bulletins.xml" value="0.18" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_etudiants.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/activity_filiere.xml" value="0.22" />
@@ -36,12 +36,6 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/etudiant_row.xml" value="0.33" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/list_row.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/gestion_des_notes/app/src/main/res/layout/planning_row.xml" value="0.1675213675213675" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_add_etudiant.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_filiere.xml" value="0.1796875" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_notes.xml" value="0.1796875" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/activity_planning.xml" value="0.1796875" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/bulletin_row.xml" value="0.1796875" />
-        <entry key="..\:/Users/el_ghizi_yassine/AndroidStudioProjects/gestion_de_scolarite/app/src/main/res/layout/list_row.xml" value="0.22" />
       </map>
     </option>
   </component>

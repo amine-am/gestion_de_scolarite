@@ -60,8 +60,8 @@
                     android:layout_width="220dp"
                     android:layout_height="40dp"
                     android:layout_centerInParent="true"
-                    android:ems="10"
                     android:background="@color/white"
+                    android:ems="10"
                     android:gravity="center" />
 
                 <com.google.android.material.card.MaterialCardView
@@ -72,10 +72,11 @@
                     android:layout_marginLeft="7sp"
                     android:layout_toRightOf="@+id/inputmodule"
                     android:backgroundTint="#FFA85B">
+
                     <ImageView
                         android:id="@+id/addmodule"
                         android:layout_width="40sp"
-                        android:layout_height="40sp"
+                        android:layout_height="match_parent"
                         android:src="@drawable/add_check" />
                 </com.google.android.material.card.MaterialCardView>
 
@@ -156,11 +157,32 @@
             <ListView
                 android:id="@+id/listfiliere"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="250dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 tools:listitem="@layout/list_row" />
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/addplanning"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="12dp"
+                android:backgroundTint="#FFA85B"
+                android:layout_margin="12dp">
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="60dp"
+                    android:text="Ajouter le planning"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/heebo_bold"
+                    android:textColor="#fff" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </LinearLayout>
 
