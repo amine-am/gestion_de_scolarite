@@ -27,9 +27,9 @@ public class PlanningAdapter extends ArrayAdapter<String> {
     Context context;
 
     public PlanningAdapter(@NonNull Context context, ArrayList<String> planning , ArrayList<String> ids) {
-        super(context, R.layout.list_row, filieres);
+        super(context, R.layout.list_row, planning);
         this.context = context;
-        list = filieres;
+        list = planning;
         listids = ids;
     }
 

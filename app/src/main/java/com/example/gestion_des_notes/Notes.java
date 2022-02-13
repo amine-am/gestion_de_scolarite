@@ -21,10 +21,12 @@ import java.util.List;
 public class Notes extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     public CardView c;
-    Spinner spinnerfil;
+    Spinner spinnerfil , spinnermod;
     List<String> list = new ArrayList<String>();
+    List<String> listdesmodules = new ArrayList<String>();
     List<String> fullNames = new ArrayList<String>();
     TextView fullnameCommaSeprated;
+    TextView filierIntutule;
 
 
 
@@ -37,6 +39,7 @@ public class Notes extends AppCompatActivity implements AdapterView.OnItemSelect
         c = (CardView) findViewById(R.id.notes);
 //        c.setOnClickListener(this);
         spinnerfil = (Spinner) findViewById(R.id.inputcne);
+        spinnermod = (Spinner) findViewById(R.id.inputmodule);
         fullnameCommaSeprated = findViewById(R.id.outputprenom);
 
         SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
@@ -50,12 +53,27 @@ public class Notes extends AppCompatActivity implements AdapterView.OnItemSelect
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         spinnerfil.setAdapter(adapter);
+
+        db.execSQL("CREATE TABLE IF NOT EXISTS etudiants(cne VARCHAR PRIMARY KEY,NOM VARCHAR ,PRENOM VARCHAR)");
+        final Cursor cu = db.rawQuery("select * from modules",null);
+        int cnt = 0;
+        if (cu.moveToFirst()) {
+            do {
+                cnt +=1;
+                System.out.println("c = " + cnt);
+                System.out.println("From modeul we have " + cu.getString(1));
+                listdesmodules.add(cu.getString(1));
+            } while (c.moveToNext());
+        }
+        ArrayAdapter<String> adaptermodules = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listdesmodules);
+        spinnermod.setAdapter(adapter);
         changeStudentName();
 
 
         spinnerfil.setAdapter(adapter);
+        spinnermod.setAdapter(adaptermodules);
         spinnerfil.setOnItemSelectedListener(this);
-
+        spinnermod.setOnItemSelectedListener(this);
     }
 
 
@@ -65,10 +83,6 @@ public class Notes extends AppCompatActivity implements AdapterView.OnItemSelect
         );
     }
 
-    private void showToast(String text){
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-    }
-
     //Changer les categories / les designations / et les tables
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -76,12 +90,17 @@ public class Notes extends AppCompatActivity implements AdapterView.OnItemSelect
                 fullNames.get(i)
         );
         SQLiteDatabase db = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
-//        db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");MUST BE INSCRIPTIONS
-        final Cursor c = db.rawQuery("select * from inscriptions where id_etudiant = \" " + spinnerfil.getSelectedItem().toString() + "\"",null);
+        String query = "select * from inscriptions where id_etudiant =?";
+        db.execSQL("CREATE TABLE IF NOT EXISTS filiers(id INTEGER PRIMARY KEY AUTOINCREMENT,INTITULE VARCHAR)");
+        final Cursor c = db.rawQuery("select * from inscriptions where id_etudiant = ?" , new String[]{spinnerfil.getSelectedItem().toString()});
+
         if(c.moveToFirst())
         {
             do{
-                System.out.println("FIIIIIIIL  = " + c.getString(0));
+                filierIntutule = findViewById(R.id.outputfiliere);
+                filierIntutule.setText(
+                        c.getString(2)
+                );
             } while(c.moveToNext());
         }
     }

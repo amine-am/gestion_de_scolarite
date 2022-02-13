@@ -61,7 +61,12 @@ public class AddPlanning extends AppCompatActivity {
                         String id_filiere = cu.getString(indexfil);
                         String id_niveau = cu.getString(indexniv);
                         String id_module = cu.getString(indexmod);
+<<<<<<< HEAD
 
+=======
+//                        planning.add(intutleDisplay);
+//                        ids.add(idDisplay);
+>>>>>>> c7a9d0bd398b0244205435ab940119a17edcc006
 
                     } while(cu.moveToNext());
                 }
@@ -76,6 +81,10 @@ public class AddPlanning extends AppCompatActivity {
 
     public void addFiliere(String text){
         filieres.add(text);
+<<<<<<< HEAD
+=======
+//        listview.setAdapter(adapter);
+>>>>>>> c7a9d0bd398b0244205435ab940119a17edcc006
     }
 
 
