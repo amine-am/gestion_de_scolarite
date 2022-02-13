@@ -9,14 +9,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.sql.SQLOutput;
+
+import com.example.gestion_des_notes.listview.PlanningAdapter;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Planning extends AppCompatActivity implements View.OnClickListener {
@@ -26,6 +28,14 @@ public class Planning extends AppCompatActivity implements View.OnClickListener 
     private Spinner spinnerniv;
     private static final String[] niveau = {"M1","M2"};
     List<String> list = new ArrayList<String>();
+    //List Planning
+    static ListView listView;
+    static ArrayList<String> planningid;
+    static ArrayList<String> planningfil;
+    static ArrayList<String> planningniv;
+    static PlanningAdapter planningadapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +65,11 @@ public class Planning extends AppCompatActivity implements View.OnClickListener 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         spinnerfil.setAdapter(adapter);
 
+
+        //List Adapter
+        planningadapter = new PlanningAdapter(getApplicationContext(), planningfil);
+        listView.setAdapter(planningadapter);
+
     }
 
     @Override
@@ -70,4 +85,6 @@ public class Planning extends AppCompatActivity implements View.OnClickListener 
     private void showToast(String text){
         Toast.makeText(Planning.this, text, Toast.LENGTH_SHORT).show();
     }
+
+
 }
