@@ -18,10 +18,21 @@ SQLite
 </p>
 
 
-## Page d'Acceuil
-
+## Page d'Accueil
+La page d'accueil contie
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154367088-17df007c-1470-4842-a273-ff695ae7bbb7.jpg" height="400px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154367096-91d8d448-f591-46ae-8c9d-62c16fdd33fb.jpg" height="400px"/> 
+</p>  
 ## Page des filières
-
+### Ajouter une filière
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154367902-5c8c5cac-edf8-40b3-8399-38a5f508937e.jpg" height="400px"/>
+</p> 
+### Supprimer une filière
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154367906-ea876a99-c389-4241-8105-54d6ac5d35c5.jpg" height="400px"/>
+</p> 
 ## Page des modules
 
 ## Page des étudiants
