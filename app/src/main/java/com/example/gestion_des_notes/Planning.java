@@ -15,6 +15,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+import com.example.gestion_des_notes.listview.Bulletin;
+import com.example.gestion_des_notes.listview.BulletinAdapter;
+import com.example.gestion_des_notes.listview.Plan;
 import com.example.gestion_des_notes.listview.PlanningAdapter;
 
 import java.lang.reflect.Array;
@@ -65,10 +68,18 @@ public class Planning extends AppCompatActivity implements View.OnClickListener 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         spinnerfil.setAdapter(adapter);
 
+        ListView PlanList = (ListView) findViewById(R.id.listplanning);
+        ArrayList<Plan> resultatList = new ArrayList<>();
 
-        //List Adapter
-        planningadapter = new PlanningAdapter(getApplicationContext(), planningfil);
-        listView.setAdapter(planningadapter);
+        PlanningAdapter adapter1 = new PlanningAdapter(this, R.layout.planning_row, resultatList);
+        PlanList.setAdapter(adapter1);
+
+
+
+        showToast("Planning" + getFil() + getNiv() + "ajouté");
+
+
+
 
     }
 

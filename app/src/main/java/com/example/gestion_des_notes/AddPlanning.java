@@ -8,8 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.gestion_des_notes.listview.Bulletin;
+import com.example.gestion_des_notes.listview.BulletinAdapter;
+import com.example.gestion_des_notes.listview.PlanModule;
+import com.example.gestion_des_notes.listview.PlanModuleAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +54,15 @@ public class AddPlanning extends AppCompatActivity {
             filieres = new ArrayList<>();
             niveau = new ArrayList<>();
             modules = new ArrayList<>();
+            showToast("Module" + "ajouté");
+            ListView ModulesList = (ListView) findViewById(R.id.listmodules);
+            ArrayList<PlanModule> resultatList = new ArrayList<>();
+
+            PlanModuleAdapter adapter1 = new PlanModuleAdapter(this, R.layout.list_row, resultatList);
+            ModulesList.setAdapter(adapter1);
+
+
+
             try {
                 SQLiteDatabase dbp = openOrCreateDatabase("myDB", Context.MODE_PRIVATE,null);
                 db.execSQL("CREATE TABLE IF NOT EXISTS planning(id_fil VARCHAR ,niveau VARCHAR, id_module VARCHAR)");
@@ -65,10 +80,15 @@ public class AddPlanning extends AppCompatActivity {
 
                     } while(cu.moveToNext());
                 }
-            }catch (Exception ex){showToast("Failed to Fetch From Planning Table");}
+            }catch (Exception ex){showToast("Failed to Fetch Data");
+
+
+            }
 
 
         }
+
+
     }
 
     public void addFiliere(String text){

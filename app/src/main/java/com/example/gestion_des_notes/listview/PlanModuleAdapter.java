@@ -14,8 +14,7 @@ import com.example.gestion_des_notes.R;
 
 import java.util.ArrayList;
 
-public class BulletinAdapter extends ArrayAdapter<Bulletin> {
-    private static final String TAG = "BulletinListAdapter";
+public class PlanModuleAdapter extends ArrayAdapter<PlanModule> {
     private Context mContext;
     int mResource;
     /**
@@ -24,7 +23,7 @@ public class BulletinAdapter extends ArrayAdapter<Bulletin> {
      * @param resource
      * @param objects
      */
-    public BulletinAdapter(Context context, int resource, ArrayList<Bulletin> objects) {
+    public PlanModuleAdapter(Context context, int resource, ArrayList<PlanModule> objects) {
         super(context, resource, objects);
         this.mContext = context;
         this.mResource = resource;
@@ -33,18 +32,18 @@ public class BulletinAdapter extends ArrayAdapter<Bulletin> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        String id = getItem(position).getId();
         String module = getItem(position).getModule();
-        String note = getItem(position).getNote();
 
-        Bulletin bulletin = new Bulletin(module, note);
+        PlanModule bulletin = new PlanModule(id, module);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
-        TextView tvModule = (TextView) convertView.findViewById(R.id.module);
-        TextView tvNote = (TextView) convertView.findViewById(R.id.note);
+        TextView tvId = (TextView) convertView.findViewById(R.id.id);
+        TextView tvModule = (TextView) convertView.findViewById(R.id.name);
 
+        tvId.setText(id);
         tvModule.setText(module);
-        tvNote.setText(String.valueOf(note));
 
         return convertView;
     }

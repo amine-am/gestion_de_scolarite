@@ -18,32 +18,41 @@ import com.example.gestion_des_notes.R;
 
 import java.util.ArrayList;
 
-public class PlanningAdapter extends ArrayAdapter<String> {
-    ArrayList<String> list;
-    Context context;
-
-    public PlanningAdapter(Context context,ArrayList<String>planning){
-        super(context,R.layout.planning_row,planning);
-        this.context = context;
-        list = planning;
+public class PlanningAdapter extends ArrayAdapter<Plan> {
+    private static final String TAG = "PlanningAdapter";
+    private Context mContext;
+    int mResource;
+    /**
+     * Default constructor for the BulletinListAdapter
+     * @param context
+     * @param resource
+     * @param objects
+     */
+    public PlanningAdapter(Context context, int resource, ArrayList<Plan> objects) {
+        super(context, resource, objects);
+        this.mContext = context;
+        this.mResource = resource;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        String id = getItem(position).getId();
+        String fil = getItem(position).getFil();
+        String niv = getItem(position).getNiv();
 
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(R.layout.planning_row, null );
+        Plan plan = new Plan(id, fil, niv);
 
-        TextView ID = (TextView) convertView.findViewById(R.id.id);
-        TextView Fil = (TextView) convertView.findViewById(R.id.filiere);
-        TextView Niv = (TextView) convertView.findViewById(R.id.niveau);
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        convertView = inflater.inflate(mResource, parent, false);
+        TextView tvid = (TextView) convertView.findViewById(R.id.id);
+        TextView tvfil = (TextView) convertView.findViewById(R.id.filiere);
+        TextView tvniv = (TextView) convertView.findViewById(R.id.niveau);
 
-        ID.setText(list.get(position));
-        Fil.setText(list.get(position));
-        Niv.setText(list.get(position));
 
-        ImageView delete = convertView.findViewById(R.id.delete);
+        tvid.setText(id);
+        tvfil.setText(fil);
+        tvniv.setText(niv);
 
         return convertView;
     }

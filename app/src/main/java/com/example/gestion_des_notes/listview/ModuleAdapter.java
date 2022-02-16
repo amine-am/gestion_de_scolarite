@@ -66,7 +66,7 @@ public class ModuleAdapter extends ArrayAdapter<String> {
                         statement.bindString(1,listids.get(position));
                         statement.execute();
                         Modules.deleteModule(position);
-                        showToast("Done");
+                        showToast("Module supprimé");
                     }catch (Exception e){
                         System.out.println(e);
                     }

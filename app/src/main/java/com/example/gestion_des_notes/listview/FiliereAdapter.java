@@ -75,7 +75,7 @@ public class FiliereAdapter extends ArrayAdapter<String> {
                         statement.bindString(1,listids.get(position));
                         statement.execute();
                         Filiere.deleteFiliere(position);
-                        showToast("Done");
+                        showToast("Filière supprimée");
                     }catch (Exception e){
                         System.out.println(e);
                     }
