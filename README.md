@@ -52,8 +52,9 @@ Pour supprimer une filière, on clique tout simplement sur le bouton de la poube
 Pour ajouter un module, on écrit le nom du module désirée puis on clique sur le bouton « check ». Le module s’ajoute dans la base de données.
 
 <p align="middle">
-  <img src="https://user-images.githubusercontent.com/65272079/154372281-2397a042-b444-4cc3-8176-c035a4c9612b.jpg" height="500px"/>
+  <img src="" height="500px"/>
 </p> 
+![Screenshot_2022-02-16-22-03-58-886_com example gestion_des_notes](https://user-images.githubusercontent.com/65272079/154373744-fdec6e00-c47c-4841-87d9-09a391bbb6f0.jpg)
 
 ### Supprimer un module
 
@@ -76,12 +77,20 @@ Dans cette page, on pourra ajouter un étudiant, en définissant son nom, préno
 
 ## Page des plannings
 
+Pour créer un planning, on choisit tout d’abord la filière et le niveau, puis on se dirige vers une autre page ou on pourra ajouter les modules que l’on veut dans ce planning. Puis on valide et on confirme. Le planning est ajouté dans notre base de données.
+
 <p align="middle">
-  <img src="" height="400px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373828-63de0717-cc87-4697-b755-a54bc5e18861.jpg" height="500px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373851-29cdaecb-fe50-4167-a92d-7e5e00422830.jpg" height="500px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373877-046ae653-47d8-4b1e-810f-e446ae883f79.jpg" height="500px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373886-1564ef4f-8c4e-42ae-bc9f-9635a867b8d3.jpg" height="500px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373897-57c51a28-e65f-4403-92e0-a3aed8f2a9a3.jpg" height="500px"/>
 </p> 
 
 
 ## Page des notes
+
+On peut ajoute la note aux modules de l'étudiant sélectionné.
 
 <p align="middle">
   <img src="https://user-images.githubusercontent.com/65272079/154371029-2dc3eb51-dbbb-4043-af38-c7089c4ab912.jpg" height="500px"/>
@@ -89,6 +98,8 @@ Dans cette page, on pourra ajouter un étudiant, en définissant son nom, préno
 
 
 ## Page des bulletins
+
+On pourra consulter les bulletins de tous les étudiants de n’importe quel filière/niveau.
 
 <p align="middle">
   <img src="https://user-images.githubusercontent.com/65272079/154370853-325cfe2c-3c83-4061-8b39-a211bdf062c4.jpg" height="500px"/>
