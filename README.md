@@ -20,14 +20,18 @@ SQLite
 
 ## Page d'Accueil
 
-La page d'accueil contie
+La page d'accueil contient les autres destinations. Chaque destination est représentée par un CardView (Filières, Modules, Etudiants, Plannings, Notes, Bulletins).
+
 <p align="middle">
   <img src="https://user-images.githubusercontent.com/65272079/154367088-17df007c-1470-4842-a273-ff695ae7bbb7.jpg" height="400px"/>
   <img src="https://user-images.githubusercontent.com/65272079/154367096-91d8d448-f591-46ae-8c9d-62c16fdd33fb.jpg" height="400px"/> 
-</p>  
+</p>
+
 ## Page des filières
 
 ### Ajouter une filière
+
+Pour ajouter une filière, on écrit le nom de la filière désirée puis on clique sur le bouton « check ». La filière s’ajoute dans la base de données.
 
 <p align="middle">
   <img src="https://user-images.githubusercontent.com/65272079/154367902-5c8c5cac-edf8-40b3-8399-38a5f508937e.jpg" height="400px"/>
@@ -35,16 +39,54 @@ La page d'accueil contie
 
 ### Supprimer une filière
 
+Pour supprimer une filière, on clique tout simplement sur le bouton de la poubelle sur le tableau des filières.
+
 <p align="middle">
   <img src="https://user-images.githubusercontent.com/65272079/154367906-ea876a99-c389-4241-8105-54d6ac5d35c5.jpg" height="400px"/>
 </p> 
 
 ## Page des modules
 
+### Ajouter une filière
+
+Pour ajouter un module, on écrit le nom du module désirée puis on clique sur le bouton « check ». Le module s’ajoute dans la base de données.
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154372281-2397a042-b444-4cc3-8176-c035a4c9612b.jpg" height="400px"/>
+</p> 
+
+### Supprimer une filière
+
+Pour supprimer un module, on clique tout simplement sur le bouton de la poubelle sur le tableau des modules.
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154372292-0f1089ae-423e-421d-83a3-5dbf17d56318.jpg" height="400px"/>
+</p> 
+
+
 ## Page des étudiants
+
+<p align="middle">
+  <img src="" height="400px"/>
+</p> 
+
 
 ## Page des plannings
 
+<p align="middle">
+  <img src="" height="400px"/>
+</p> 
+
+
 ## Page des notes
 
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154371029-2dc3eb51-dbbb-4043-af38-c7089c4ab912.jpg" height="400px"/>
+</p> 
+
+
 ## Page des bulletins
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/65272079/154370853-325cfe2c-3c83-4061-8b39-a211bdf062c4.jpg" height="400px"/>
+</p> 
