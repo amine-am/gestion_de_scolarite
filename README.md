@@ -52,9 +52,8 @@ Pour supprimer une filière, on clique tout simplement sur le bouton de la poube
 Pour ajouter un module, on écrit le nom du module désirée puis on clique sur le bouton « check ». Le module s’ajoute dans la base de données.
 
 <p align="middle">
-  <img src="" height="500px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154373744-fdec6e00-c47c-4841-87d9-09a391bbb6f0.jpg" height="500px"/>
 </p> 
-![Screenshot_2022-02-16-22-03-58-886_com example gestion_des_notes](https://user-images.githubusercontent.com/65272079/154373744-fdec6e00-c47c-4841-87d9-09a391bbb6f0.jpg)
 
 ### Supprimer un module
 
