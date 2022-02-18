@@ -13,8 +13,8 @@ Modèle de données :
 SQLite
 
 <p align="middle">
-  <img src="https://user-images.githubusercontent.com/65272079/154357896-f9e067c8-a703-48a8-8151-af7a0ad76342.png" height="500px"/>
-  <img src="https://user-images.githubusercontent.com/65272079/154357912-b82ac006-ad38-4468-bd58-d52bf57c5d55.png" height="500px"/> 
+  <img src="https://user-images.githubusercontent.com/65272079/154357896-f9e067c8-a703-48a8-8151-af7a0ad76342.png" height="300px"/>
+  <img src="https://user-images.githubusercontent.com/65272079/154357912-b82ac006-ad38-4468-bd58-d52bf57c5d55.png" height="300px"/> 
 </p>
 
 
